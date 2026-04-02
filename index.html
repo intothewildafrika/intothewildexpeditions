@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Into the Wild Expeditions | Africa Overland Safari & Wildlife Filming</title>
+<meta name="description" content="Small-group overland expeditions across Africa led by wildlife filmmakers with 35 years in the field. Namibia, Botswana & beyond. Maximum 8 guests. Join the waitlist.">
+<meta name="keywords" content="Africa overland expedition, Namibia safari, Botswana safari, wildlife filming expedition, small group safari Africa, adventure travel Africa, rooftop tent safari, self drive Namibia, wildlife photography tour Africa, Into the Wild Expeditions">
+<meta name="author" content="Into the Wild Expeditions">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (for sharing on social media) -->
+<meta property="og:title" content="Into the Wild Expeditions | Africa Overland Safari">
+<meta property="og:description" content="Small-group overland expeditions led by wildlife filmmakers. Namibia, Botswana & beyond. Max 8 guests. Join the waitlist.">
+<meta property="og:image" content="https://intothewildafrika.github.io/intothewildexpeditions/LogoITWE.png">
+<meta property="og:url" content="https://intothewildafrica.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Into the Wild Expeditions | Africa Overland Safari">
+<meta name="twitter:description" content="Small-group overland expeditions led by wildlife filmmakers. Namibia, Botswana & beyond.">
+<meta name="twitter:image" content="https://intothewildafrika.github.io/intothewildexpeditions/LogoITWE.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --yellow: #F2C94C;
+    --black: #0a0a0a;
+    --bone: #F5F0E8;
+    --dark: #111111;
+    --mid: #1a1a1a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--bone);
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.35;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://intothewildafrika.github.io/intothewildexpeditions/heroBG.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    background-attachment: scroll;
+    z-index: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hero-bg {
+      background-position: 65% 55%;
+    }
+
+    .logo-wrap {
+      width: min(260px, 70vw);
+      margin-bottom: 1rem;
+    }
+
+    .scroll-hint {
+      bottom: 1.5rem;
+    }
+  }
+
+  /* ── SCROLL INDICATOR -- always centred ── */
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 2;
+    opacity: 0.4;
+    animation: fadeUp 1s 1.2s ease both;
+  }
+
+  /* Dark overlay so text stays readable */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.75) 100%);
+    z-index: 1;
+  }
+
+  .hero .glow,
+  .hero .logo-wrap,
+  .hero .hero-tagline,
+  .hero .hero-headline,
+  .hero .hero-sub,
+  .hero a,
+  .hero .scroll-hint {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Horizon line effect */
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+    opacity: 0.4;
+  }
+
+  /* Radial glow behind logo */
+  .glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(ellipse at center, rgba(242,201,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.7; }
+  }
+
+  .logo-wrap {
+    position: relative;
+    z-index: 2;
+    width: min(380px, 80vw);
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    animation: fadeUp 1s ease both;
+  }
+
+  .logo-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-tagline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--bone);
+    opacity: 0.75;
+    margin-bottom: 1rem;
+    z-index: 2;
+    animation: fadeUp 1s 0.2s ease both;
+  }
+
+  .hero-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 9vw, 6.5rem);
+    line-height: 0.95;
+    color: var(--yellow);
+    z-index: 2;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 1s 0.35s ease both;
+  }
+
+  .hero-sub {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+    max-width: 520px;
+    line-height: 1.7;
+    opacity: 0.65;
+    z-index: 2;
+    margin-bottom: 3rem;
+    animation: fadeUp 1s 0.5s ease both;
+  }
+
+  .scroll-hint span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: var(--yellow);
+    animation: scrollDrop 1.8s ease-in-out infinite;
+  }
+
+  @keyframes scrollDrop {
+    0% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+    51% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* ── SECTION BASE ── */
+  section {
+    padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 6vw, 4rem);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  /* ── WHAT WE DO ── */
+  .what-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2px;
+    margin-top: 3rem;
+  }
+
+  .what-card {
+    background: var(--mid);
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .what-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--yellow);
+    transition: height 0.4s ease;
+  }
+
+  .what-card:hover { background: #1f1f1f; }
+  .what-card:hover::before { height: 100%; }
+
+  .what-card .icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .what-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--yellow);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .what-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.6;
+    font-weight: 300;
+  }
+
+  /* ── SOLD OUT STAMP ── */
+  .sold-out-stamp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    border: 5px solid var(--yellow);
+    color: var(--yellow);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    letter-spacing: 0.15em;
+    padding: 0.2rem 1.2rem;
+    opacity: 0.92;
+    pointer-events: none;
+    white-space: nowrap;
+    background: rgba(10,10,10,0.15);
+    z-index: 10;
+  }
+
+  /* ── NAMIBIA TRIP ── */
+  .trip-block {
+    background: var(--mid);
+    border: 1px solid rgba(242,201,76,0.15);
+    padding: clamp(2rem, 5vw, 3.5rem);
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+
+  .trip-block::after {
+    content: 'OCT 2026';
+    position: absolute;
+    right: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: var(--yellow);
+    opacity: 0.06;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .trip-block h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    line-height: 1;
+    color: var(--bone);
+    margin-bottom: 1.5rem;
+  }
+
+  .trip-block h2 span { color: var(--yellow); }
+
+  .trip-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .trip-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .trip-meta-item .label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    opacity: 0.8;
+  }
+
+  .trip-meta-item .value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--bone);
+  }
+
+  .trip-desc {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    opacity: 0.6;
+    max-width: 600px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .route-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .route-tag {
+    background: rgba(242,201,76,0.1);
+    border: 1px solid rgba(242,201,76,0.25);
+    color: var(--yellow);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    padding: 0.35rem 0.8rem;
+    text-transform: uppercase;
+  }
+
+  /* ── FORM ── */
+  .form-section {
+    background: var(--dark);
+    padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 6vw, 4rem);
+  }
+
+  .form-inner {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .form-inner h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    line-height: 1;
+    color: var(--bone);
+    margin-bottom: 0.75rem;
+  }
+
+  .form-inner h2 span { color: var(--yellow); }
+
+  .form-inner p {
+    font-size: 0.95rem;
+    opacity: 0.55;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .waitlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 500px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  .field-wrap {
+    position: relative;
+  }
+
+  .waitlist-form input,
+  .waitlist-form select {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 0;
+    color: var(--bone);
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    padding: 1rem 1.2rem;
+    outline: none;
+    transition: border-color 0.3s, background 0.3s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .waitlist-form select option {
+    background: var(--dark);
+    color: var(--bone);
+  }
+
+  .waitlist-form input::placeholder { color: rgba(245,240,232,0.3); }
+
+  .waitlist-form input:focus,
+  .waitlist-form select:focus {
+    border-color: var(--yellow);
+    background: rgba(242,201,76,0.05);
+  }
+
+  .btn-submit {
+    background: var(--yellow);
+    color: var(--black);
+    border: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.15em;
+    padding: 1.1rem 2rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .btn-submit:hover {
+    background: #ffd865;
+    transform: translateY(-1px);
+  }
+
+  .btn-submit:active { transform: translateY(0); }
+
+  .form-note {
+    font-size: 0.75rem;
+    opacity: 0.3;
+    margin-top: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── SUCCESS STATE ── */
+  .success-msg {
+    display: none;
+    text-align: center;
+    padding: 3rem;
+    background: rgba(242,201,76,0.06);
+    border: 1px solid rgba(242,201,76,0.2);
+  }
+
+  .success-msg h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: var(--yellow);
+    margin-bottom: 0.75rem;
+  }
+
+  .success-msg p { opacity: 0.6; font-weight: 300; line-height: 1.7; }
+
+  /* ── SOCIAL BAR ── */
+  .social-bar {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 3rem clamp(1.5rem, 6vw, 4rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .social-bar .brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    color: var(--yellow);
+    letter-spacing: 0.1em;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .social-links a {
+    color: var(--bone);
+    opacity: 0.4;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: opacity 0.2s, color 0.2s;
+  }
+
+  .social-links a:hover { opacity: 1; color: var(--yellow); }
+
+  .copyright {
+    font-size: 0.72rem;
+    opacity: 0.2;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(242,201,76,0.2), transparent);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ── STAT ROW ── */
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem 5rem;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 6vw, 4rem);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat .num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--yellow);
+    line-height: 1;
+    display: block;
+  }
+
+  .stat .desc {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.45;
+    margin-top: 0.4rem;
+    display: block;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="glow"></div>
+
+  <div class="logo-wrap">
+    <img src="https://intothewildafrika.github.io/intothewildexpeditions/LogoITWE.png" alt="Into the Wild Expeditions"
+         onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block'">
+    <div id="logo-text" style="display:none; text-align:center;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:clamp(3rem,12vw,7rem); color:#F2C94C; line-height:0.9; letter-spacing:-0.02em;">INTO THE<br>WILD</div>
+      <div style="font-family:'Barlow Condensed',sans-serif; font-size:clamp(1.2rem,4vw,2rem); color:#fff; font-weight:300; letter-spacing:0.3em; margin-top:0.4rem;">EXPEDITIONS</div>
+    </div>
+  </div>
+
+  <a href="#waitlist" style="display:inline-block; background:var(--yellow); color:var(--black); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.2em; padding:1rem 2.5rem; text-decoration:none; transition:transform 0.2s; z-index:2; margin-bottom:2rem;"
+     onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+    Join the Waitlist
+  </a>
+
+  <p class="hero-tagline">Africa · Botswana · Namibia · Beyond</p>
+  <h1 class="hero-headline">The Wild<br>Is Calling</h1>
+  <p class="hero-sub">Small-group overland expeditions led by filmmakers, conservationists, and lifelong adventurers. Maximum 8 guests. Zero compromises.</p>
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</div>
+<div class="stats">
+  <div class="stat">
+    <span class="num">48K+</span>
+    <span class="desc">YouTube Followers</span>
+  </div>
+  <div class="stat">
+    <span class="num">35+</span>
+    <span class="desc">Years in the Field</span>
+  </div>
+  <div class="stat">
+    <span class="num">8</span>
+    <span class="desc">Max Guests Per Trip</span>
+  </div>
+  <div class="stat">
+    <span class="num">5</span>
+    <span class="desc">Countries · One Journey</span>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ WHAT WE DO ══ -->
+<section>
+  <span class="section-label">What We Do</span>
+  <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,6vw,4rem); line-height:1; color:var(--bone); max-width:600px;">Not a tour. <span style="color:var(--yellow);">An expedition.</span></h2>
+
+  <div class="what-grid">
+    <div class="what-card">
+      <span class="icon">🦁</span>
+      <h3>Wildlife First</h3>
+      <p>Led by wildlife filmmakers with 35 years in the field. You don't just watch the wild — you become part of the story.</p>
+    </div>
+    <div class="what-card">
+      <span class="icon">🏕️</span>
+      <h3>Base Camp Model</h3>
+      <p>Rooftop tents, campfire meals, and real wilderness immersion. Comfort where it counts, raw where it matters.</p>
+    </div>
+    <div class="what-card">
+      <span class="icon">🎥</span>
+      <h3>Cinematic Eye</h3>
+      <p>Every expedition is fully documented. You become part of the story — and the impact that story creates when it reaches the world.</p>
+    </div>
+    <div class="what-card">
+      <span class="icon">🌍</span>
+      <h3>Conservation Heart</h3>
+      <p>We work with rangers, scientists, and local communities. Your trip contributes directly to the wild places we visit.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ NAMIBIA TRIP ══ -->
+<section>
+  <span class="section-label">First Expedition · October 2026</span>
+  <div class="trip-block">
+    <div class="sold-out-stamp">SOLD OUT</div>
+    <h2>18 Days<br><span>Across Namibia</span></h2>
+
+    <div class="trip-meta">
+      <div class="trip-meta-item">
+        <span class="label">Departure</span>
+        <span class="value">October 2026</span>
+      </div>
+      <div class="trip-meta-item">
+        <span class="label">Duration</span>
+        <span class="value">18 Days</span>
+      </div>
+      <div class="trip-meta-item">
+        <span class="label">Group Size</span>
+        <span class="value">Max 8 Guests</span>
+      </div>
+      <div class="trip-meta-item">
+        <span class="label">Style</span>
+        <span class="value">Overland · Self-Drive</span>
+      </div>
+    </div>
+
+    <p class="trip-desc">
+      Six rooftop-tent 4x4s. One unforgettable route through the world's oldest desert, 
+      pink flamingo lagoons, ancient San rock art, Himba villages, and the vast 
+      open plains of Etosha. This is Namibia the way it was meant to be experienced.
+    </p>
+
+    <div class="route-list">
+      <span class="route-tag">Windhoek</span>
+      <span class="route-tag">Quiver Tree Forest</span>
+      <span class="route-tag">Sossusvlei</span>
+      <span class="route-tag">Swakopmund</span>
+      <span class="route-tag">Walvis Bay</span>
+      <span class="route-tag">Spitzkoppe</span>
+      <span class="route-tag">Brandberg</span>
+      <span class="route-tag">Opuwo</span>
+      <span class="route-tag">Etosha</span>
+    </div>
+
+    <a href="#waitlist" style="display:inline-block; border:1px solid var(--yellow); color:var(--yellow); font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.15em; padding:0.9rem 2rem; text-decoration:none; transition:all 0.2s;"
+       onmouseover="this.style.background='var(--yellow)'; this.style.color='var(--black)'" onmouseout="this.style.background='transparent'; this.style.color='var(--yellow)'">
+      Register Your Interest
+    </a>
+  </div>
+</section>
+
+<!-- ══ WAITLIST FORM ══ -->
+<div class="form-section" id="waitlist">
+  <div class="form-inner">
+    <h2>Get on the<br><span>Waitlist</span></h2>
+    <p>Spots are extremely limited. Register your interest and we'll reach out personally when bookings open — no spam, ever.</p>
+
+    <form class="waitlist-form" id="waitlistForm">
+      <div class="form-row">
+        <div class="field-wrap">
+          <input type="text" name="firstName" placeholder="First Name" required>
+        </div>
+        <div class="field-wrap">
+          <input type="text" name="lastName" placeholder="Last Name" required>
+        </div>
+      </div>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="whatsapp" placeholder="WhatsApp Number (optional)">
+      <select name="interest">
+        <option value="" disabled selected>Which expedition interests you?</option>
+        <option value="namibia-2027">Namibia — 2027</option>
+        <option value="botswana-2027">Botswana — 2027</option>
+        <option value="2028">Any 2028 Expeditions</option>
+        <option value="notify">Just notify me of all trips</option>
+      </select>
+      <select name="groupSize">
+        <option value="" disabled selected>Travelling solo or with others?</option>
+        <option value="solo">Solo</option>
+        <option value="couple">Couple (2)</option>
+        <option value="small">Small Group (3–4)</option>
+        <option value="larger">Larger Group (5+)</option>
+      </select>
+      <button type="submit" class="btn-submit">Claim My Spot →</button>
+      <p class="form-note">No payment required. Zero spam. We'll contact you personally.</p>
+    </form>
+
+    <div class="success-msg" id="successMsg">
+      <h3>You're on the list 🌍</h3>
+      <p>We've received your details and will be in touch personally when spots open. In the meantime, follow along on YouTube and Instagram for expedition updates.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SOCIAL / FOOTER ══ -->
+<div class="social-bar">
+  <span class="brand">Into the Wild Expeditions</span>
+  <div class="social-links">
+    <a href="https://youtube.com/@intothewildafrica" target="_blank">YouTube</a>
+    <a href="https://instagram.com/intothewildwithbrendan" target="_blank">Instagram</a>
+  </div>
+  <span class="copyright">© 2026 Into the Wild Expeditions</span>
+</div>
+
+<script>
+  // Form submission handler
+  // TO CONNECT TO MAILCHIMP: Replace this with Mailchimp's embedded form action URL
+  document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = this;
+    const btn = form.querySelector('.btn-submit');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    // Collect data
+    const data = {
+      firstName: form.firstName.value,
+      lastName: form.lastName.value,
+      email: form.email.value,
+      whatsapp: form.whatsapp.value,
+      interest: form.interest.value,
+      groupSize: form.groupSize.value,
+      timestamp: new Date().toISOString()
+    };
+
+    // ── OPTION A: Mailchimp (replace URL below with your Mailchimp list POST URL)
+    // fetch('https://YOUR_MAILCHIMP_URL', { method: 'POST', body: JSON.stringify(data) })
+
+    // ── Formspree integration
+    fetch('https://formspree.io/f/xreolbdn', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+      } else {
+        btn.textContent = 'Something went wrong — try again';
+        btn.disabled = false;
+      }
+    })
+    .catch(() => {
+      btn.textContent = 'Something went wrong — try again';
+      btn.disabled = false;
+    });
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.what-card, .trip-block, .stat').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
